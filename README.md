@@ -1,29 +1,29 @@
-# docker-travis-ci-cli
+# travis-docker
 
 Docker container for [travis ci client](http://blog.travis-ci.com/2013-01-14-new-client/) following 
-[installation instructions](https://github.com/travis-ci/travis.rb#installation), using Ruby 1.9.3.
+[installation instructions](https://github.com/travis-ci/travis.rb#installation), using Ruby.
 
-I primarily used this to `travis setup releases`.
+It's my own fork from https://github.com/andredumas/docker-travis-ci-cli
 
 ```
-docker pull andredumas/travis-ci-cli
+docker pull antonmry/travis-docker
 ```
 
 ## Usage
 
 ```
-docker run --rm -v $PWD:/repo -v ~/.travis:/travis andredumas/travis-ci-cli [command]
+docker run --rm -v $PWD:/repo -v ~/.travis:/travis antonmry/travis-docker [command]
 ```
 
 ```
-$ docker run --rm -v $PWD:/repo -v ~/.travis:/travis andredumas/travis-ci-cli -v
-1.7.1
+$ docker run --rm -v $PWD:/repo -v ~/.travis:/travis antonmry/travis-docker -v
+1.8.2
 ```
 
 ### Detailed Example
 
 ```
-$ alias travis='docker run --rm -v $PWD:/repo -v ~/.travis:/travis andredumas/travis-ci-cli'
+$ alias travis='docker run --rm -v $PWD:/repo -v ~/.travis:/travis antonmry/travis-docker' 
 $ travis whoami
 not logged in, please run travis login
 $ travis login --github-token <public_repo personal access token>
