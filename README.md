@@ -1,5 +1,7 @@
 # travis-docker
 
+[![](http://badge-imagelayers.iron.io/antonmry/travis-docker:latest.svg)](http://imagelayers.iron.io/?images=antonmry/travis-docker:latest 'Get your own badge on imagelayers.iron.io')
+
 Docker container for [travis ci client](http://blog.travis-ci.com/2013-01-14-new-client/) following 
 [installation instructions](https://github.com/travis-ci/travis.rb#installation), using Ruby.
 
